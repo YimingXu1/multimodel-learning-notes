@@ -18,5 +18,22 @@ The workshop explored the computational and scientific issues surrounding the di
 
 
 
-# “SPEAKING ROSETTA”
+# SPEAKING ROSETTA
+
+![alt img](./ref/Speaking Rosetta project.jpg)
+
+Fig 1 is the visual representation of the end-to-end systems, and structure, of the Rosetta project. 
+
+## Dataset
+
+- Mboshi
+
+- FlickR-real speech
+- SPEECH-COCO-synthetic
+- How-To dataset
+- Spoken Dutch Corpus
+
+## Evaluation
+
+## XNMT Toolkit
 
