@@ -35,5 +35,15 @@ Fig 1 is the visual representation of the end-to-end systems, and structure, of 
 
 ## Evaluation
 
+- BLEU
+- error rates
+- word discovery metrics
+
 ## XNMT Toolkit
+
+Useful, XNMT is a sequence-to-sequence neural network toolkit
+which reads in a sequence of (variable-length) inputs, and
+then generates a different sequence of (variable-length) output. 
+
+
 
