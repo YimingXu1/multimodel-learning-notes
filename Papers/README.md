@@ -13,3 +13,4 @@
 - [ ] Align or attend? Toward More Efficient and Accurate Spoken Word Discovery Using Speech-to-Image Retrieval.[[paper](http://homepage.tudelft.nl/f7h35/papers/icassp21.3.pdf)].
 
 - [ ] Learning to Recognise Words using Visually Grounded Speech. [[paper](http://homepage.tudelft.nl/f7h35/papers/iscas2021.1.pdf)].
+- [ ] Image2speech: Automatically generating audio descriptions of images. [[paper](http://odettescharenborg.ruhosting.nl/wp-content/uploads/2015/02/hasegawajohnson_isga18.pdf)].
