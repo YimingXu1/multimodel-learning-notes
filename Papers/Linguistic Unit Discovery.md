@@ -41,9 +41,20 @@ Fig 1 is the visual representation of the end-to-end systems, and structure, of 
 
 ## XNMT Toolkit
 
-Useful, XNMT is a sequence-to-sequence neural network toolkit
-which reads in a sequence of (variable-length) inputs, and
-then generates a different sequence of (variable-length) output. 
+Useful, XNMT is a sequence-to-sequence neural network toolkit which reads in a sequence of (variable-length) inputs, and then generates a different sequence of (variable-length) output. 
 
+## Now I just focus on Image and linguistics
 
+### Speech-to-Image
+
+A S2I system learns to map images and speech to the same embedding space, ad retrieves an image using spoken captions. And while doing so, it uses multimodel input to discover speech units in an unsupervised manner.
+
+### Image-to-Speech
+
+Similiar to Image Caption. XNMT accepts image feature vectors as inputs, and generates speech units as output, which were sent to TTS. Four types of intermediate speed unit were tested:
+
+- L1-words
+- L1-phones, generated using a same-language ASR, which provides an upper bound performance
+- L2-phones from the cross-language definition of units approach 
+- pseudo-phones generated using AUD
 
