@@ -16,4 +16,6 @@
 
 ## Text&Image
 
-- [ ] Modeling Text with Graph Convolutional Network for Cross-Modal Information Retrieval. [[paper](https://arxiv.org/pdf/1802.00985.pdf)].[[note](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/Linguistic%20Unit%20Discovery.md)].
+- [x] Modeling Text with Graph Convolutional Network for Cross-Modal Information Retrieval. [[paper](https://arxiv.org/pdf/1802.00985.pdf)].[[note](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/Linguistic%20Unit%20Discovery.md)].
+
+- [ ] Cross-modal Scene Graph Matching for Relationship-aware Image-Text Retrieval. [[paper](https://arxiv.org/pdf/1910.05134.pdf)].[[note](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/Linguistic%20Unit%20Discovery.md)].
