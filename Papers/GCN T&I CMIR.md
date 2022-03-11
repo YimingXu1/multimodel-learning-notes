@@ -60,3 +60,7 @@ $F_{out} = g_{\theta} * F_{in} = U g_{\theta}U^{T}F_{in}$
 $\theta$ is a vector to learn:
 
 $g_{\theta} = \sum_{k = 0}^{K-1} \theta_k T_k (\widetilde{L})$
+
+where $T_{k}(x) = 2xT_{k-1}(x) - T_{k-2}(x)$ , $T_{0}(x) = 1$ , $T_{1}(x) = x $ , $\widetilde{L} = 2/\lambda_{max}L - I_N$ , $\lambda_{max}$ is the lengest enginvalue of $L$ .
+
+**Then**, $F_{out} = g_{\theta}F_{in}$ .
