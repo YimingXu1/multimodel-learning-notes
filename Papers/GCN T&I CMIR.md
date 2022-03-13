@@ -20,7 +20,7 @@ In text modeling, they use GCN, and in image modeling, they use neural network w
 **Contributions**
 
 - Model text data by GCN, which realizes the cross-modal retrieval between irregular graph-structured data and regular grid-structured data;
-- Jointly learn the textual and visual representations as well as text-image similarity metric, providing an end-to-end training mode
+- Jointly learn the textual and visual representations as well as text-image similarity metric, providing an end-to-end training model;
 - Experimental on Eng-Wiki, NUS-WIDE, Pascal, TVGraz and Ch-Wiki.
 
 ## Methodology
