@@ -29,8 +29,40 @@ In this paper, authors organize the objects and the relationships into scene gra
 
 ### Visual Scene Graph Generation
 
-![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/SGM-CMIR1.jpg)
+![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/SGM-CMIR2.jpg)
 
 Given a raw image, represent a visual scene graph as $G = \{V, E\}$, $V$ is the node-set, and $E$ is the edge-set.  As shown in figure, the pink rectangles denote object nodes, each of which corresponds to a region of the image. The ellipses in light blue are relationship nodes, each of which connects two object nodes by directed edges.
 
+If there are $N_o$ object nodes and $N_r$ relationship nodes in VSG:
+
+Object nodes set: $O = \{o_{i}|i = 1,2,...,N_o \}$
+
+Relationship nodes set: $R = \{r_{ij}\} \subseteq O \times O$, $\vert R \vert = N_r$, $r_{ij}$ is the relationship of $o_i$ and $o_j$
+
 ### Visual Scene Graph Encoder
+
+![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/SGM-CMIR1.jpg)
+
+**Visual Feature Extractor.** The pre-trained visual feature extractor: emcoding image regions into feature vector (Faster-RCNN). Each node in VSG will be encoded into a $d_1$-dimension visual feature. 
+
+For object node $o_i$, visual feature vector $v_{oi}$ is extracted from its corresponding image region.
+
+For relationship node $r_{ij}$ , visual feature vector $r_{ij}$ is extracted from the union image region of $o_i$ and $o_j$ .
+
+**Label Embedding Layer.** 
+
+Given  one-hot vectors $l_{oi}$ and $l_{r_{ij}}$, output $e_{oi}$ and $e_{r_{ij}}$ :
+
+$W_o \in R^{d_2 \times C_o}$ and $W_r \in R^{d_2 \times C_r}$ are trainable parameters and initialized by word2vec ($d_2=300$). $C_o$ is the category number of objects and $C_r$ is the category number of relationships.
+
+$e_{oi} = W_oI_{oi}$ , $W_o \in R^{d_2 \times C_o}$
+
+ $e_{r_{ij}} = WrI_{r_{ij}}, W_r \in R^{d_2 \times C_r}$
+
+**Multi-modal Fusion Layer.**
+
+$W_u \in R^{d_1 \times (d_1 + d_2)}$ is the trainable parameter of fusion layer.
+
+$u_{oi} = tanh(W_u[v_{oi},e_{oi}])$,
+
+$u_{r_{ij}} = tanh(W_u[v_{r_{ij}},e_{r_{ij}}]) $
