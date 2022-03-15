@@ -66,3 +66,31 @@ $W_u \in R^{d_1 \times (d_1 + d_2)}$ is the trainable parameter of fusion layer.
 $u_{oi} = tanh(W_u[v_{oi},e_{oi}])$,
 
 $u_{r_{ij}} = tanh(W_u[v_{r_{ij}},e_{r_{ij}}]) $
+
+
+
+### Visual Scene Graph Encoder
+
+![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/SGM-CMIR3.jpg)
+
+Two relationshps: word order (black arrows) and semantic relationship (brown arrows, are built from SPICE)
+
+The textual scene graph encoder consists of a word embedding layer, a word-level bi-GRU encoder, and a path-level biGRU encoder.
+
+Build TSG: 
+
+Fiest, each word $w_i$  in the sentences is embedded into a vector by the word embedding layer as $e_{w_{i}} = W_el_{w_{i}}$ . ($l_{w_{i}}$ is the one-hot vector of $w_i$ , $W_e$ is the parameter matrix of embedding layer, initialisation as the same word2vec in VSG encoder and be learned during training end-to-end).
+
+Second, two kinds of path are encoded separately by different bi-GRUs. 
+
+For the word-order path:
+
+$\overrightarrow{h_{w_{i}}} = \overrightarrow{GRU_w}(e_{w_{i}},\overrightarrow{h_{w_{i-1}}})$
+
+$\overleftarrow{h_{w_{i}}} = \overleftarrow{GRU_w}(e_{w_{i}},\overleftarrow{h_{w_{i+1}}})$
+
+$h_{w_{i}} = (\overrightarrow{h_{w_{i}}} + \overleftarrow{h_{w_{i}}})/2$
+
+For the $N_p$ semantic relationship paths:
+
+$h_{p{i}} = (\overrightarrow{GRU_p}(path_i) + \overleftarrow{GRU_p}(path_i))/2, i \in [1,N_p]$
