@@ -93,4 +93,35 @@ $h_{w_{i}} = (\overrightarrow{h_{w_{i}}} + \overleftarrow{h_{w_{i}}})/2$
 
 For the $N_p$ semantic relationship paths:
 
-$h_{p{i}} = (\overrightarrow{GRU_p}(path_i) + \overleftarrow{GRU_p}(path_i))/2, i \in [1,N_p]$
+$h_{p{i}} = (\overrightarrow{GRU_p}(path_i) + \overleftarrow{GRU_p}(path_i))/2, i \in [1,N_p]$ , the last hidden state feature of $i-th$ semantic relationship path, which is also a relationship feature of the TSG.
+
+
+
+### Similarity Function
+
+Each graph has two levels of features, this work match them respectively.
+
+Setting: 
+
+- there are $N_o$ and $N_w$ object features in the visual and textual feature graph, each of them is a $D$-dimension vector.
+- for feature vectors $h_i$ and $h_j$ , the similarity score is $h_{i}^{T}h_{j}$, the similarity scores of V and T objects, it's a $N_w \times N_o$ matrix.
+- find the maximum value of each row, which means for very textual object, the most related visual objects among $N_o$ visual objects is picked up.
+- similarity score: 
+  - $S^{o} = (\sum_{t=1}^{N_w} \max_{i \in [1, N_o]} h_{w_t}^{T}h_{o_i})/N_{w}$
+  - $S^{r} = (\sum_{t=1}^{N_p} \max_{r_{ij} \in R} h_{p_t}^{T}h_{r_{ij}})/N_{p}$
+  - $S = S^o + S^r$
+
+
+
+### Loss Function
+
+usually, use triplet loss:
+
+$L(k,l) = \sum_{\hat{l}} max(0,m- S_{k \hat{l}} + S_{k\hat{l}}) + \sum_{\hat{k}} max(0,m- S_{k \hat{l}} + S_{k\hat{l}})$
+
+Consider to the influence of hardest negative samples,
+
+$L_{+}(k,l) = max(0, m - S_{kl} + S_{k \hat{l}}) + max(0, m - S_{kl} + S_{\hat{k} l}) $
+
+
+
