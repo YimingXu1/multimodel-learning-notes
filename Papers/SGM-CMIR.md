@@ -123,5 +123,7 @@ Consider to the influence of hardest negative samples,
 
 $L_{+}(k,l) = max(0, m - S_{kl} + S_{k \hat{l}}) + max(0, m - S_{kl} + S_{\hat{k} l}) $
 
+where $\hat{l} = argmax_{j \not = l}S_{kj}$ and $k' = argmax_{j \not = k}S_{jl}$ are hardest negative in the mini-batch.
+
 
 
