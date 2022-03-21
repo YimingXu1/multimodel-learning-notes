@@ -10,7 +10,7 @@ The aim for this framework is to predict contextualized latent representations t
 
 ## Method
 
-![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/data2vec.jpg)
+![alt img](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/ref/data2vec1.jpg)
 
 data2vec is trained by predicting the model representations of the full input data given a partial view of the input.
 
