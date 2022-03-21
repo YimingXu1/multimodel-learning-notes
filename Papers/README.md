@@ -23,5 +23,5 @@
 
 ## Text, Image & Speech
 
-- [ ] data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language.[[paper](https://scontent-amt2-1.xx.fbcdn.net/v/t39.8562-6/271974914_483120576492438_4239522333319653600_n.pdf?_nc_cat=107&ccb=1-5&_nc_sid=ae5e01&_nc_ohc=xM2q48LBPWMAX9sIWf-&_nc_ht=scontent-amt2-1.xx&oh=00_AT9vP0RN48dENdk7g4zDE_Nm0y92_94acOO25ZDFYRBL8A&oe=623D2311)].[[note](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/Linguistic%20Unit%20Discovery.md)].
+- [ ] data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language.[[paper](https://scontent-amt2-1.xx.fbcdn.net/v/t39.8562-6/271974914_483120576492438_4239522333319653600_n.pdf?_nc_cat=107&ccb=1-5&_nc_sid=ae5e01&_nc_ohc=xM2q48LBPWMAX9sIWf-&_nc_ht=scontent-amt2-1.xx&oh=00_AT9vP0RN48dENdk7g4zDE_Nm0y92_94acOO25ZDFYRBL8A&oe=623D2311)].[[note](https://github.com/YimingXu1/multimodel-learning-notes/blob/main/Papers/data2vec.md)].
 
